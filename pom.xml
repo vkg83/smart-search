@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vkg</groupId>
-	<artifactId>catalog</artifactId>
+	<artifactId>smart-search</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Catalog</name>
-	<description>Product Catalog</description>
+	<name>Smart Search</name>
+	<description>Provides human readable search facility</description>
 	<properties>
 		<spring.version>3.2.13.RELEASE</spring.version>
 	</properties>
