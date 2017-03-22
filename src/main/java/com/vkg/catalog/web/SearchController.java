@@ -1,6 +1,5 @@
 package com.vkg.catalog.web;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,20 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.vkg.catalog.model.Product;
-import com.vkg.catalog.service.CatalogService;
-
 @Controller
 @RequestMapping("/price")
-public class PriceController {
-	@Autowired CatalogService catalogService;
-	
+public class SearchController {
+
 	@RequestMapping(value="/{productId}", method=RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
 	public Double findPrice(@PathVariable int productId) {
-		Product p = catalogService.find(productId);
-		return p.getPrice();
+		return productId * 1.0;
 	}
 	
 	@ExceptionHandler
